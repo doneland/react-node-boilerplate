@@ -1,6 +1,12 @@
+require('bootstrap/dist/css/bootstrap.css');
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/app';
+import { Router, hashHistory } from 'react-router';
+import routes from './routes';
 
-
-ReactDOM.render(<App />, document.getElementById("app"));
+ReactDOM.render(
+  <Router history={hashHistory}>
+    {routes}
+  </Router>, 
+  document.getElementById("app")
+);
